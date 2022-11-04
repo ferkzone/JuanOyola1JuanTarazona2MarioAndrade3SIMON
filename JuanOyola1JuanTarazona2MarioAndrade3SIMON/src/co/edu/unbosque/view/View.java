@@ -18,7 +18,7 @@ public class View extends JFrame{
 		panelsecuencia = new PanelSecuencia();
 		panelbotones = new PanelBotones();
 		terminarbut = new JButton("Terminar");
-		numeroLabel = new JLabel("Número");
+		numeroLabel = new JLabel("Numero");
 		setSize(600,600);
 		setResizable(false);
 		setTitle("Simon");
@@ -31,6 +31,7 @@ public class View extends JFrame{
 		panelbotones.getBoton3().addActionListener(pControl);
 		panelbotones.getBoton4().addActionListener(pControl);
 		terminarbut.addActionListener(pControl);
+		terminarbut.setFocusPainted(false);
 		panelbotones.setBounds(137, 120, 300, 300);
 		terminarbut.setBounds(250,500,100,30);
 		panelsecuencia.setBounds(250, 50, 150,30);
