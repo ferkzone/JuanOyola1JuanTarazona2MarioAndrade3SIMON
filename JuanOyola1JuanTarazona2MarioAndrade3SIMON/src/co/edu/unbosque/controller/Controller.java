@@ -24,26 +24,30 @@ public class Controller implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		String m1="",m2="",m3="",m4="",secuU="";
+		String secuU="";
+		String[] secuencia = new String[4];
 		if(e.getActionCommand().equals(gui.getPanelbotones().A)){
-			m1 = "1";
-		}else if(e.getActionCommand().equals(gui.getPanelbotones().B)) {			
-			m2 = "2";
-		}else if(e.getActionCommand().equals(gui.getPanelbotones().C)) {
-			m3 = "3";
+			s.ponerN1();		
+		}if(e.getActionCommand().equals(gui.getPanelbotones().B)) {	
+			s.ponerN2();
+		}if(e.getActionCommand().equals(gui.getPanelbotones().C)) {
+			s.ponerN3();
 		}else if(e.getActionCommand().equals(gui.getPanelbotones().D)) {
-			m4 = "4";
+			s.ponerN4();
 		}
 		else if(e.getActionCommand().equals(gui.TERMINAR)) {
-			secuU = m1+m2+m3+m4; 
-			System.out.println(secuU);
-			if(s.compararSecuencia(secuU, secuP)==0) {				
-				gui.mostrarExito("Secuencia exitosa!");				
+			secuencia = s.getSecuencia();
+			for(int i =0;i<4;i++) {
+				secuU += secuencia[i];
+			}
+			if(s.compararSecuencia(secuU,secuP)==0) {				
+				gui.mostrarExito("Secuencia exitosa!");
+				gui.setVisible(false);
 			}else {
 				gui.mostrarFallo("Fallaste!");
-			}
-		}
+				gui.setVisible(false);		
+			}			
+		}		
 	}
-	
-	
+		
 }
