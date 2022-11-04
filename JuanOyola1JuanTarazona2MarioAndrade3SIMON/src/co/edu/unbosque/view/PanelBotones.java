@@ -24,10 +24,18 @@ public class PanelBotones extends JPanel{
 		boton2 = new JButton("2");
 		boton3 = new JButton("3");
 		boton4 = new JButton("4");
+		boton1.setBackground(Color.GREEN);
+		boton2.setBackground(Color.RED);
+		boton3.setBackground(Color.YELLOW);
+		boton4.setBackground(Color.CYAN);
 		boton1.setActionCommand(A);
 		boton2.setActionCommand(B);
 		boton3.setActionCommand(C);
-		boton4.setActionCommand(D);		
+		boton4.setActionCommand(D);	
+		boton1.setFocusPainted(false);
+		boton2.setFocusPainted(false);
+		boton3.setFocusPainted(false);
+		boton4.setFocusPainted(false);
 		panel.setLayout(new GridLayout(2,2));
 		panel.add(boton1);
 		panel.add(boton2);
@@ -35,6 +43,8 @@ public class PanelBotones extends JPanel{
 		panel.add(boton4);
 		return panel;		
 	}
+	
+
 	/**
 	 * @return the boton1
 	 */
