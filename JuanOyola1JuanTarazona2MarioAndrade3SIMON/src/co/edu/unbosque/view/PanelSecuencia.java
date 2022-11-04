@@ -1,5 +1,6 @@
 package co.edu.unbosque.view;
 
+import java.awt.Color;
 import java.awt.GridLayout;
 import java.util.*;
 import java.util.Timer;
@@ -39,26 +40,65 @@ public class PanelSecuencia extends JPanel{
 				switch(contador) {
 				case 0:
 					contador = 1;
-					casilla4.setText("");
 					casilla1.setText(n1);
+					if(n1.equals("1")) {
+						casilla1.setBackground(Color.GREEN);
+					}else if(n1.equals("2")) {
+						casilla1.setBackground(Color.RED);
+					}else if(n1.equals("3")) {
+						casilla1.setBackground(Color.YELLOW);
+					}else if(n1.equals("4")) {
+						casilla1.setBackground(Color.CYAN);
+					}
 					break;
 				case 1:
 					contador = 2;
 					casilla1.setText("");
+					casilla1.setBackground(getBackground());
 					casilla2.setText(n2);
+					if(n2.equals("1")) {
+						casilla2.setBackground(Color.GREEN);
+					}else if(n2.equals("2")) {
+						casilla2.setBackground(Color.RED);
+					}else if(n2.equals("3")) {
+						casilla2.setBackground(Color.YELLOW);
+					}else if(n2.equals("4")) {
+						casilla2.setBackground(Color.CYAN);
+					}
 					break;
 				case 2:
 					contador = 3;
 					casilla2.setText("");
+					casilla2.setBackground(getBackground());
 					casilla3.setText(n3);
+					if(n3.equals("1")) {
+						casilla3.setBackground(Color.GREEN);
+					}else if(n3.equals("2")) {
+						casilla3.setBackground(Color.RED);
+					}else if(n3.equals("3")) {
+						casilla3.setBackground(Color.YELLOW);
+					}else if(n3.equals("4")) {
+						casilla3.setBackground(Color.CYAN);
+					}
 					break;
 				case 3:
 					contador = 4;
 					casilla3.setText("");
+					casilla3.setBackground(getBackground());
 					casilla4.setText(n4);
+					if(n4.equals("1")) {
+						casilla4.setBackground(Color.GREEN);
+					}else if(n4.equals("2")) {
+						casilla4.setBackground(Color.RED);
+					}else if(n4.equals("3")) {
+						casilla4.setBackground(Color.YELLOW);
+					}else if(n4.equals("4")) {
+						casilla4.setBackground(Color.CYAN);
+					}
 					break;	
 				case 4:
 					casilla4.setText("");
+					casilla4.setBackground(getBackground());
 					timer.cancel();
 					break;
 				}				
